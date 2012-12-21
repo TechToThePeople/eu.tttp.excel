@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <extension key="eu.tttp.exportexcel" type="module">
-  <downloadUrl>http://github.com/tttp/eu.tttp.exportexcel.zip</downloadUrl>
+  <downloadUrl>http://github.com/TechToThePeople/eu.tttp.exportexcel.zip</downloadUrl>
   <file>exportexcel</file>
   <name>Export to Excel</name>
   <description>Excel isn't very good at importing csv files. If you have screamed at your computer with weird characters, long lines of gibberish and hair pulling, this extension is for you.</description>
