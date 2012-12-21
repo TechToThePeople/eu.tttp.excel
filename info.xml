@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<extension key="eu.tttp.exportexcel" type="module">
+  <downloadUrl>http://github.com/tttp/eu.tttp.exportexcel.zip</downloadUrl>
+  <file>exportexcel</file>
+  <name>Export to Excel</name>
+  <description>Excel isn't very good at importing csv files. If you have screamed at your computer with weird characters, long lines of gibberish and hair pulling, this extension is for you.</description>
+  <license>aGPL v3</license>
+  <maintainer>
+    <author>xavier dutoit</author>
+    <email>civicrm@tttp.eu</email>
+  </maintainer>
+  <releaseDate>2012-12-21</releaseDate>
+  <version>1.0</version>
+  <develStage>beta</develStage>
+  <compatibility>
+    <ver>4.2</ver>
+  </compatibility>
+  <comments>Enable the extension and export, that's it</comments>
+  <civix>
+    <namespace>CRM/Exportexcel</namespace>
+  </civix>
+</extension>
