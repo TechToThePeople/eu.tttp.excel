@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <extension key="eu.tttp.exportexcel" type="module">
-  <downloadUrl>http://github.com/TechToThePeople/eu.tttp.exportexcel.zip</downloadUrl>
   <file>exportexcel</file>
+  <downloadUrl>http://github.com/TechToThePeople/eu.tttp.excel/archive/master.zip</downloadUrl>
   <name>Export to Excel</name>
   <description>Excel isn't very good at importing csv files. If you have screamed at your computer with weird characters, long lines of gibberish and hair pulling, this extension is for you.
  Technically, it isn't excel but an html table with a header that pretends to be excel. Close enough to trick excel to behave like it doesn't hate you too much.
