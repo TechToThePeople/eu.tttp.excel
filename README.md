@@ -18,4 +18,4 @@ Surely.
 Technical
 --------------
 
-The trick is to export an html table. with the right content type, it goes to excel and it import it smootly
+The trick is to export an html table. with the right content type, it goes to excel and it import it smoothly
