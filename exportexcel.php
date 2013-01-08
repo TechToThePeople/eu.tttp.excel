@@ -2,14 +2,25 @@
   
 function writeHTMLFile($fileName, &$header, &$rows, $titleHeader = NULL, $outputHeader = TRUE) {
   if ($outputHeader) {
-    header('Content-language: en');
     CRM_Utils_System::download(CRM_Utils_String::munge($fileName),
-      'application/vnd.ms-excel',
+      'application/vnd.ms-excel; charset=utf-8',
       CRM_Core_DAO::$_nullObject,
       'xls',
       FALSE
     );
-    echo "<table><thead><tr>";
+// a bit of magic copy paste. Something in the html header helps excel understanding unicode
+echo <<<EOD
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns="http://www.w3.org/TR/REC-html40">
+ <head>
+  <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+  <meta name=ProgId content=Excel.Sheet><html xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns="http://www.w3.org/TR/REC-html40" />
+ <meta http-equiv="Content-Language" Content="en" />
+EOD;
+    echo "<table><thead><tr class='xlGeneralBold'>";
     foreach ($header as $field) {
       echo "<th>$field</th>";
     }
