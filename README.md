@@ -19,3 +19,23 @@ Technical
 --------------
 
 The trick is to export an html table. with the right content type, it goes to excel and it import it smoothly
+
+# Usage Instructions #
+This extension affects the **Export Contacts** option for searches and group members, ie when you have done a search or listed the contacts in a group, you can choose what you want to do with the contacts that you have selected.  
+This feature works exactly the same as it would otherwise, ie it takes you through the same 3 step process for selecting which fields to export but the file that it exports is in a different format.  
+The file is exported with a XLS extension, so that when you open it, it will (normally) be opened in Excel but in fact the file is actually in HTML format, so when you open the file in Excel you will get a warning message saying (something like) ..  
+> The file you are trying to open, ‘ *your_file_name*.xls’, is in a different file format than that specified by the extension.  Verify that the file is not corrupted and is from a trusted source before opening the file.  Do you want to open the file now?
+
+.. and has buttons for **Yes**, **No** and **Help**.  
+You can click **Yes** and the file will open.
+
+However, when you come to save the file you will get a prompt (something like) ..  
+> *your_file_name*.xls may contain features that are not compatible with Web Page.  Do you want to keep the workbook in this format?  
+- To keep this format, which leaves out any incompatible features, click Yes.
+- To preserve the features, click No.  Then save a copy in the latest Excel format.
+- To see what might be lost, click Help.  
+
+.. and has buttons for **Yes**, **No** and **Help**.  
+
+You should click **No** and then you will get a prompt to save the file in the native Excel format (eg xlsx).  
+Once the file is in the native Excel format you will not get these confusing messages again.
