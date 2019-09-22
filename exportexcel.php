@@ -1,5 +1,5 @@
 <?php
-  
+
 function writeHTMLFile($fileName, &$header, &$rows, $titleHeader = NULL, $outputHeader = TRUE) {
   if ($outputHeader) {
     CRM_Utils_System::download(CRM_Utils_String::munge($fileName),
@@ -65,9 +65,10 @@ function exportexcel_civicrm_export( $exportTempTable, $headerRows, $sqlColumns,
       }
       $componentDetails[] = $row;
     }
- 
+
     //CRM_Core_Report_Excel::
-    writeHTMLFile( CRM_Export_BAO_Export::getExportFileName('xls', $exportMode)." ".date("Y-m-d_H-i"), $headerRows,$componentDetails, null, $writeHeader );
+    $exportProcessor = new CRM_Export_BAO_ExportProcessor($exportMode,NULL,NULL);
+    writeHTMLFile( $exportProcessor->getExportFileName('xls', $exportMode)." ".date("Y-m-d_H-i"), $headerRows,$componentDetails, null, $writeHeader );
     $writeHeader = false;
     $offset += $limit;
   }
