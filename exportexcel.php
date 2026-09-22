@@ -57,9 +57,9 @@ function exportexcel_civicrm_export( $exportTempTable, $headerRows, $sqlColumns,
       break;
     }
 
-    $componentDetails = array( );
+    $componentDetails = [ ];
     while ( $dao->fetch( ) ) {
-      $row = array( );
+      $row = [ ];
       foreach ( $sqlColumns as $column => $dontCare ) {
         $row[$column] = $dao->$column;
       }
