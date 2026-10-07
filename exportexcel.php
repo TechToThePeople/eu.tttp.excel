@@ -48,7 +48,6 @@ function exportexcel_civicrm_export( $exportTempTable, $headerRows, $sqlColumns,
   $limit  = 10;
 
   $query = "SELECT * FROM $exportTempTable";
-  require_once 'CRM/Core/Report/Excel.php';
   while ( 1 ) {
     $limitQuery = $query . " LIMIT $offset, $limit;";
     $dao = CRM_Core_DAO::executeQuery( $limitQuery );
